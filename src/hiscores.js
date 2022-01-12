@@ -167,6 +167,8 @@ const _parseBosses = (statsArray) => {
 const _parseStats = (stats) => {
   if (!stats || !Array.isArray(stats) || stats.length <= 0)
     throw new Error('Invalid stats array received!');
+  if (stats.length !== 84)
+    throw new Error('This version of osrs-json-api is no longer compatible with the hiscores API');
 
   const player = {};
 
